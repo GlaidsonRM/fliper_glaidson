@@ -13,12 +13,14 @@ class TextBig extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Obx(() => Text(
-      text,
-      style: TextStyle(
-          color: configurationController.themeDark.value ? Colors.white : Color(0xff3B5CB8),
-          fontFamily: 'Segoe UI',
-          fontWeight: fontWeight ? FontWeight.bold : FontWeight.normal,
-          fontSize: fontSize),
-    ));
+          text,
+          style: TextStyle(
+              color: configurationController.themeDark.value
+                  ? Colors.white
+                  : Color(0xff3B5CB8),
+              fontFamily: 'Segoe UI',
+              fontWeight: fontWeight ? FontWeight.bold : FontWeight.normal,
+              fontSize: fontSize),
+        ));
   }
 }

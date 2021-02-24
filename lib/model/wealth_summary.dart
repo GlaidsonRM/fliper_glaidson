@@ -8,11 +8,11 @@ class WealthSummary {
 
   WealthSummary(
       {this.id,
-        this.total,
-        this.gain,
-        this.hasHistory,
-        this.profitability,
-        this.cdi});
+      this.total,
+      this.gain,
+      this.hasHistory,
+      this.profitability,
+      this.cdi});
 
   WealthSummary.fromMap(Map<String, dynamic> map) {
     id = map['id'];

@@ -8,17 +8,20 @@ class TextSmall extends StatelessWidget {
   final double fontSize;
   final bool fontWeight;
 
-  TextSmall({this.text = 'New text', this.fontSize = 14, this.fontWeight = true});
+  TextSmall(
+      {this.text = 'New text', this.fontSize = 14, this.fontWeight = true});
 
   @override
   Widget build(BuildContext context) {
     return Obx(() => Text(
-      text,
-      style: TextStyle(
-          color: configurationController.themeDark.value ? Colors.greenAccent : Color(0xff5B5F71),
-          fontFamily: 'Segoe UI',
-          fontWeight: fontWeight ? FontWeight.bold : FontWeight.normal,
-          fontSize: fontSize),
-    ));
+          text,
+          style: TextStyle(
+              color: configurationController.themeDark.value
+                  ? Colors.greenAccent
+                  : Color(0xff5B5F71),
+              fontFamily: 'Segoe UI',
+              fontWeight: fontWeight ? FontWeight.bold : FontWeight.normal,
+              fontSize: fontSize),
+        ));
   }
 }

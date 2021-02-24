@@ -22,10 +22,9 @@ class ConfigurationController extends GetxController {
   }
 
   _changeTheme() {
-    if(themeDark.value){
+    if (themeDark.value) {
       Get.changeTheme(ThemeData.dark());
-    }
-    else {
+    } else {
       Get.changeTheme(ThemeData.light());
     }
   }

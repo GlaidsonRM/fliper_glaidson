@@ -4,7 +4,6 @@ import 'package:fliper_glaidson/controller/configuration_controller.dart';
 import 'package:fliper_glaidson/widgets/outline_button_widget.dart';
 
 class ConfigurationScreen extends StatelessWidget {
-
   final ConfigurationController controller = Get.find();
   final TextEditingController _timeController = TextEditingController();
   final _formKey = GlobalKey<FormState>();
@@ -71,17 +70,18 @@ class ConfigurationScreen extends StatelessWidget {
   }
 
   String _validateMinute(String value) {
-    if(GetUtils.isNullOrBlank(value)){
+    if (GetUtils.isNullOrBlank(value)) {
       return 'Digite o tempo para atualização';
     }
     return null;
   }
 
   saveTime() {
-    if(_formKey.currentState.validate()){
+    if (_formKey.currentState.validate()) {
       controller.setTimeUpdate(int.parse(_timeController.text));
 
-      Get.snackbar('Sucesso', 'Tempo de atualizações definido', snackPosition: SnackPosition.BOTTOM);
+      Get.snackbar('Sucesso', 'Tempo de atualizações definido',
+          snackPosition: SnackPosition.BOTTOM);
     }
   }
 }
